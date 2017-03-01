@@ -41,5 +41,6 @@
     "redux": "^3.0.4",
     "redux-promise": "^0.5.3",
     "slick-carousel": "^1.6.0"
+
   }
 }
