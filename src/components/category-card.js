@@ -25,6 +25,7 @@ const styles = {
         borderRadius: '8px',
         transition: '0.5s transform',
         transformOrigin: '93px 0px',
+        cursor: 'pointer',
         ':hover': {
             transform: 'scale(1.05)',
         }
