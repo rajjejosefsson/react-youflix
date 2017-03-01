@@ -34,6 +34,10 @@ export default class App extends Component {
                     <VideoPlayer/>
                 </div>
 
+                <div className="video-list-container">
+                    <VideoList/>
+                </div>
+
                 <div className="categories-container">
                     <CategoryList/>
                 </div>

@@ -11,6 +11,7 @@ class VideoList extends Component {
         super(props);
         this.next = this.next.bind(this);
         this.previous = this.previous.bind(this);
+        this.initVideo();
     }
 
     next() {
@@ -25,6 +26,19 @@ class VideoList extends Component {
         this.props.selectedVideo(video);
     }
 
+    initVideo(){
+
+
+        let starterVideo = {
+            id: {
+                videoId: 'cqFITwR6bVY'
+            },
+            snippet: {
+                description: 'Welcome to YouFlix!'
+            }
+        };
+        this.props.selectedVideo(starterVideo);
+    }
 
     render() {
 
@@ -61,7 +75,8 @@ class VideoList extends Component {
                                     var url = video.snippet.thumbnails.high.url;
                                     return <img onMouseEnter={this.handleRightClick}
                                                 onClick={() => this.showVideo(video)}
-                                                key={video.etag} src={url}
+                                                key={video.etag}
+                                                src={url}
                                                 style={styles.imageStyle}
                                                 className="tile"
                                     />
@@ -87,6 +102,7 @@ const styles = {
         margin: '0 3px',
         transition: '1s transform',
         transformOrigin: '150px 150px',
+        cursor: 'pointer',
         ':hover': {
             transform: 'scale(1.1)',
         }
