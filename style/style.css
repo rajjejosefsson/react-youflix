@@ -1,0 +1,145 @@
+* {
+    min-height: 0;
+    min-width: 0;
+}
+
+.body {
+    background-color: #141414;
+}
+
+.youflix-container h3 {
+    margin-top: 150px;
+    margin-bottom: 10px;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 38px;
+}
+
+.youflix-container h5 {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.youflix-container button {
+    background-color: #ab0404;
+    color: white;
+    border-color: transparent;
+    transition: background-color 0.3s ease;
+}
+
+.youflix-container button:hover,
+.youflix-container button:focus {
+    border-color: transparent;
+    background-color: #ab0404 !important;
+    color: white;
+}
+
+.video-list-container {
+    margin-top: 40px;
+    padding: 43px 0;
+    background-color: black;
+}
+
+.search-bar-container {
+    margin: 20px 0;
+    padding: 0 140px;
+}
+
+.search-bar {
+    max-width: 800px;
+}
+
+p {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.container {
+    max-width: 0;
+}
+
+.video-player-container {
+    margin-top: 50px;
+}
+
+.video-player-holder {
+    padding: 0 300px;
+}
+
+.categories-container {
+    margin: 40px 0;
+}
+
+.tile {
+    float: left;
+    width: 100px;
+    -webkit-transition: -webkit-transform 0.2s;
+    transition: -webkit-transform 0.2s;
+    transition: transform 0.2s;
+    transition: transform 0.2s, -webkit-transform 0.2s;
+    user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    max-height: 200px;
+}
+
+
+
+.header-container {
+    margin-top: 80px;
+}
+
+
+/* IMPORTANT IF NOT SET IMAGE WONT BE SEEN UNTIL HOVER SOMETIMES */
+.slick-initialized .slick-slide {
+    min-height: 200px;
+}
+
+.slick-track:hover .tile {
+    -webkit-transform: translateX(-25%);
+    transform: translateX(-25%);
+}
+
+.slick-track:hover .tile:hover {
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+    -webkit-transition-duration: 0.18182s;
+    transition-duration: 0.18182s;
+}
+
+.slick-track:hover .tile:hover ~ .tile {
+    -webkit-transform: translateX(25%);
+    transform: translateX(25%);
+}
+
+.row {
+    margin-right: 0.5rem !important;
+    margin-left: 0.5rem !important;
+}
+
+.fa-arrow-left,
+.fa-arrow-right {
+    font-size: 40px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+
+}
+
+.fa-arrow-left:hover,
+.fa-arrow-right:hover {
+    color: azure;
+
+}
+
+
+.img-circle {
+    border-radius: 50%;
+}
+
+
+.navbar-brand {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    margin: auto;
+}
