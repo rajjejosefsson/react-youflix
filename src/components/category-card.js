@@ -1,14 +1,18 @@
 import React from 'react';
 import Radium from 'radium';
 
+const CategoryCard = ({onCategorySelect, category}) =>  {
 
-const CategoryCard = (props) => {
 
-    return(
-        <div className="row middle-xs center-xs" style={styles.categoryCard}>
-                <p style={styles.textStyle}>{props.category}</p>
-        </div>
-    );
+        return (
+            <div
+                className="row middle-xs center-xs"
+                style={styles.categoryCard}
+                onClick={() => onCategorySelect(category)}>
+                <p style={styles.textStyle}>{category}</p>
+            </div>
+        );
+
 };
 
 
@@ -29,7 +33,6 @@ const styles = {
         fontSize: '24px',
         fontWeight: 'bold'
     }
-
 };
 
 

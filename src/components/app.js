@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import VideoList from '../containers/video-list';
 import SearchBar from '../containers/search-bar';
 import VideoPlayer from '../containers/video-player';
-import CategoryList from './category-list';
+import CategoryList from '../containers/category-list';
 import TopNav from './top-nav';
 
 export default class App extends Component {

@@ -1,34 +1,43 @@
 import React, {Component} from 'react';
 import Radium from 'radium';
-import CategoryCard from './category-card';
+import CategoryCard from '../components/category-card';
+import {connect} from 'react-redux';
+import {fetchVideos} from '../actions/index';
 
 class CategoryList extends Component {
 
 
     constructor(props) {
         super(props);
-    }
-
-    onCategory() {
-
+        this.onCategory = this.onCategory.bind(this);
     }
 
 
+    onCategory(selected) {
+
+        if (true) {
+            // do check here
+        }
+
+        this.props.fetchVideos(selected);
+    }
 
 
     renderList() {
-        const categories = ['action', 'kids', 'fun', 'math', 'language', 'swedish', 'science', 'animated', '"Boys"', '"Girls"'];
+        const categories = ['Kids', 'Funny', 'Math', 'Language', 'Bablarna', 'Music', 'Animated', 'Cartoon'];
 
         return categories.map(category => {
             return (
-                <CategoryCard key={category} category={category}/>
+                <CategoryCard key={category} category={category}
+                              onCategorySelect={selected => this.onCategory(selected)}/>
             );
         });
-
     }
 
 
     render() {
+
+
         return (
             <div className="row center-xs">
                 {this.renderList()}
@@ -54,4 +63,4 @@ const styles = {
 };
 
 
-export default Radium(CategoryList);
+export default connect(null, {fetchVideos})(Radium(CategoryList));
