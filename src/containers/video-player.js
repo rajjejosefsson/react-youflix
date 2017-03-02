@@ -31,7 +31,6 @@ class VideoPlayer extends Component {
 
 
 function mapStateToProps({video}) {
-    console.log("video",video);
     return {video};
 }
 

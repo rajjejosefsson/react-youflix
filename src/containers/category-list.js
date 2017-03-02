@@ -19,12 +19,44 @@ class CategoryList extends Component {
             // do check here
         }
 
-        this.props.fetchVideos(selected);
+        let category = '';
+
+        switch (selected) {
+            case 'Kids':
+                category = 'Kids';
+                break;
+            case 'Funny':
+                category = 'Funny Kid Videos';
+                break;
+            case 'Math':
+                category = 'Math for kids';
+                break;
+            case 'English':
+                category = 'English for kids';
+                break;
+            case 'Bablarna':
+                category = 'Bablarna';
+                break;
+            case 'Music':
+                category = 'Music for kids';
+                break;
+            case 'Animated':
+                category = 'Animated for kids';
+                break;
+            case 'Cartoon':
+                category = 'Cartoon for kids';
+                break;
+            default:
+                category = 'For kids'
+        }
+
+
+        this.props.fetchVideos(category);
     }
 
 
     renderList() {
-        const categories = ['Kids', 'Funny', 'Math', 'Language', 'Bablarna', 'Music', 'Animated', 'Cartoon'];
+        const categories = ['Kids', 'Funny', 'Math', 'English', 'Bablarna', 'Music', 'Animated', 'Cartoon'];
 
         return categories.map(category => {
             return (
